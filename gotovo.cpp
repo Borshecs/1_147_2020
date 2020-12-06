@@ -42,12 +42,15 @@ public:
 	void print()
 	{
 		cout << "You entered" << "\n";
-		
-		cout << "Name: " << name <<"\n" << "year: " << year << "\n" << "famous actors: " << famousactor << "\n" << "raiting on kinoposk: " << raiting1 << "\n" << "raiting on ivi: " << raiting2 << endl;
 
-		cout << "\n" <<"the movie is playing";
+		cout << "Name: " << name << "\n" << "year: " << year << "\n" << "famous actors: " << famousactor << "\n" << "raiting on kinoposk: " << raiting1 << "\n" << "raiting on ivi: " << raiting2 << endl;
+
 	}
+	void printend()
+	{
 
+		cout << "\n" << "the movie is playing";
+	}
 
 
 
@@ -110,27 +113,30 @@ int main()
 
 	FilmSelect get(choose);
 	get.message();
-	
 
-	
-	
+
+
+
 	cin >> selectfilm;
 	if (selectfilm == "Tenet" || selectfilm == "tenet")
 	{
-		
+
 		tenet.print();
+		tenet.printend();
 
 	}
 
 	else if (selectfilm == "Bloodshot" || selectfilm == "bloodshot")
 	{
 		bloodshot.print();
+		tenet.printend();
 
 	}
 
 	else if (selectfilm == "Code8" || selectfilm == "code8")
 	{
 		code8.print();
+		tenet.printend();
 
 	}
 
